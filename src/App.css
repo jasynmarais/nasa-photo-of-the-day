@@ -31,3 +31,36 @@
     transform: rotate(360deg);
   }
 }
+
+.header-container {
+  background: #df4646fd;
+  margin-bottom: 4rem;
+}
+
+.header-container h1 {
+  margin: 0;
+  padding: 1rem 0;
+  color: #f3f3f3;
+}
+
+.media-video {
+  margin: 0 auto;
+}
+
+.explanation-container {
+  max-width: 70vw;
+  margin: 2rem auto;
+}
+
+.explanation {
+  width: 100%;
+  line-height: 1.3;
+  font-size: 1.6rem;
+}
+
+.date-input {
+  margin: 2rem 0;
+  width: 20rem;
+  font-size: 1.6rem;
+  padding: 1rem;
+}

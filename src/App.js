@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 
+const axios = require('axios');
+
+const apiKey = 'vSbHMwWWl96BgKXN2Qxqm8JLJ17HoWsqlC0KAUMK';
+
 function App() {
-  return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-    </div>
-  );
+
+  useEffect(() => {
+    axios
+      .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
+  return <div className="App"></div>;
 }
 
 export default App;

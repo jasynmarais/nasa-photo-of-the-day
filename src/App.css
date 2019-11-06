@@ -2,45 +2,47 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .header-container {
-  background: #df4646fd;
-  margin-bottom: 4rem;
+  background: #f0db4f;
+  margin-bottom: 2rem;
 }
 
 .header-container h1 {
   margin: 0;
   padding: 1rem 0;
-  color: #f3f3f3;
+  color: #323330;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  margin: 0 auto;
+  border-bottom: 1px solid #323330;
+  padding-bottom: 2rem;
+  max-width: 80vw;
+}
+
+.input-container p {
+  font-size: 1.2rem;
+}
+
+.date-input {
+  margin: 1rem 0 2rem 0;
+  width: 20rem;
+  font-size: 1.6rem;
+  padding: 1rem;
+  outline: none;
+}
+
+.info-container {
+  margin: 3rem;
+}
+
+.info-container p {
+  font-size: 1.2rem;
 }
 
 .media-video {
@@ -56,11 +58,4 @@
   width: 100%;
   line-height: 1.3;
   font-size: 1.6rem;
-}
-
-.date-input {
-  margin: 2rem 0;
-  width: 20rem;
-  font-size: 1.6rem;
-  padding: 1rem;
 }

@@ -8,10 +8,11 @@ import { PhotoDate } from './components/PhotoDate';
 import { Title } from './components/Title';
 
 const apiKey = 'vSbHMwWWl96BgKXN2Qxqm8JLJ17HoWsqlC0KAUMK';
+const photoOfTheDayApi = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
 function App() {
-  const [MediaUrl, setImage] = useState('');
-  const [MediaType, setMediaType] = useState('');
+  const [mediaUrl, setImage] = useState('');
+  const [mediaType, setMediaType] = useState('');
   const [title, setTitle] = useState('');
   const [explanation, setExplanation] = useState('');
   const [date, setDate] = useState('');
@@ -23,7 +24,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${dateQuery}`)
+    .get(`${photoOfTheDayApi}&date=${dateQuery}`)
       .then(res => {
         setTitle(res.data.title);
         setDate(res.data.date);
@@ -41,9 +42,12 @@ function App() {
   <div className="header-container">
   <h1>NASA Photo of the Day</h1>
 </div>
-  <Title title={title} />
+
   <InputDate handleDateChange={handleDateChange} dateQuery={dateQuery} />
-  <PhotoDate date={date} />
+  <div className="info-container">
+    <Title title={title} />
+    <PhotoDate date={date} />
+  </div>
   <MediaUrl mediaUrl={mediaUrl} mediaType={mediaType} />
   <Explanation explanation={explanation} />
   

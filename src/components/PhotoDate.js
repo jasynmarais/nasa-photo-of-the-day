@@ -1,4 +1,7 @@
 import React from 'react';
-export const PhotoDate = ({ date }) => {
+
+const PhotoDate = ({ date }) => {
     return <p className="date">Taken on {date}</p>;
 };
+
+export default PhotoDate;

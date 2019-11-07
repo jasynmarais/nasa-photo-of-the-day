@@ -40,7 +40,7 @@ function App() {
   return (
   <div className="App">
   <div className="header-container">
-  <h1>NASA Photo of the Day</h1>
+  <h1>NASA Photo or Video  of the Day</h1>
 </div>
 
   <InputDate handleDateChange={handleDateChange} dateQuery={dateQuery} />
